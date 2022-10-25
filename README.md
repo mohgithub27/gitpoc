@@ -23,4 +23,4 @@ Then look for the file :
 - > mysql -u <user_name> -p accounts < accountsdb.sql
 
 ok 
-we are making a change
+we are making a minute change
