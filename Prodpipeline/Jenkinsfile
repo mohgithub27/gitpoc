@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     tools {
@@ -6,13 +7,13 @@ pipeline {
     }
     
     environment {
-
+        
+        vprofileRegistry = "http://574468706409.dkr.ecr.ap-south-1.amazonaws.com"
         cluster = "production"
         service = "prodsvc"
     }
 
-    
-        stage("deploy to Production clustor ECS") {
+    stage("deploy to Production Cluster ECS") {
             steps{
                 withAWS(credentials: 'awscreds', region: 'ap-south-1') {
 			sh 'aws ecs update-service --cluster ${cluster}  --service ${service} --force-new-deployment'
@@ -21,4 +22,3 @@ pipeline {
             }
 } 
 }
-
