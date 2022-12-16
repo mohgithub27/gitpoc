@@ -4,8 +4,8 @@ pipeline {
     environment {
         
         vprofileRegistry = "http://574468706409.dkr.ecr.ap-south-1.amazonaws.com"
-        cluster = "production"
-        service = "prodsvc"
+        cluster = "Production"
+        service = "proddsvc"
     }
 
     stages {
