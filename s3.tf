@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "Iac_demo_bucket" {
   acl    = "private"
 
   tags = {
-    Name        = "Example Bucket"
-    Environment = "Production"
+    Name        = "Demo Bucket for POC"
+    Environment = "Non-Prod"
   }
 }
